@@ -80,9 +80,9 @@ class MainActivity : AppCompatActivity() {
 
     fun searchData(view:View) {
         val cName = search_bar.editableText.toString()
-
         weatherViewModel.getCityData(cName)
         closeKeyboard()
+        Toast.makeText(this, cName.toUpperCase(),Toast.LENGTH_SHORT).show()
     }
 
     private fun closeKeyboard() {
